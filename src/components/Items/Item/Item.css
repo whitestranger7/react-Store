@@ -1,0 +1,88 @@
+.item {
+    width: 200px;
+    height: 320px;
+    background-color: white;
+    border-radius: 2px;
+    margin: 15px;
+    float: left;
+    transition: .4s all;
+}
+
+.item:hover {
+    box-shadow: 0 0 10px black;
+}
+
+.item__main {
+    height: 60%;
+    width: 100%;    
+}
+
+.item__main .img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.item__main .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.item__sub {
+    height: 30%;
+    width: 100%;
+}
+
+.item__sub .title {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.item__sub .title h4 {
+    margin: 0 auto;
+    font-size: 140%;
+}
+
+.checkout {
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.price {
+    float: left;
+    background-color: yellowgreen;
+    height: 100%;
+    width: 65%;
+    font-size: 200%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+.price p {
+    margin: auto;
+}
+
+.basket {
+    float: right;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    background-color: teal;
+    border-radius: 5px;
+    font-size: 30px;
+    line-height: 50px;
+    margin-right: 5px;
+}
+
+.basket a i {
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.fa-shopping-basket {
+    color: black;
+}

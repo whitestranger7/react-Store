@@ -1,0 +1,6 @@
+footer {
+    width: 100%;
+    height: 100px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(214,214,221,1) 0%, rgba(93,92,98,1) 0%, rgba(65,62,101,1) 58%);
+}

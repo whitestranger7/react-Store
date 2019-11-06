@@ -1,0 +1,6 @@
+{
+    "posts": [
+        {"src": "http://www.virginmedia.com/content/dam/virginmedia/dotcom/images/mobile-browse/Apple/iphone-11/purple/iPhone11-purple-front_back.png", "alt": "IPhone 11", "price": "1000$"},
+        {"src": "http://shop.ee.co.uk/content/dam/everything-everywhere/images/SHOP/affiliates/google/affilliates_google_pixel3_liqourice_800x800.png", "alt": "Google Pixel 3", "price": "500$"}
+    ]
+}

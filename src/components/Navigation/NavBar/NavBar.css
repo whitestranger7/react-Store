@@ -1,0 +1,36 @@
+.navBar {
+    height: 100%;
+    width: 100%;
+}
+
+.navBar ul {
+    list-style: none;
+    font-size: 180%;
+    margin: 0;
+    height: 100%;
+    display: flex;
+}
+
+.navBar ul li {
+    margin-right: 5%;
+    transition: .3s background-color;
+    height: 100%;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.navBar ul li:hover {
+    background-color: #4087ad;
+}
+
+.navBar ul li a {
+    text-decoration: none;
+    color: wheat;
+}
+
+.navBar ul li a .fa-shopping-basket{
+    color: wheat;
+}

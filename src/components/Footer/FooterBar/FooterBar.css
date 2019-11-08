@@ -18,14 +18,39 @@
     width: 20%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .footerBar ul li a {
     text-decoration: none;
     color: wheat;
+    transition: .3s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerBar p {
     margin: 10px 0 0 0;
     font-family: 'Indie Flower', cursive;
+}
+
+.linkedIn:hover {
+    color: #2867B2;
+}
+
+.github:hover {
+    color: #fafafa;
+}
+
+.codewars:hover {
+    color: #b84333;
+}
+
+.facebook:hover {
+    color: #8b9dc3;
+}
+
+.instagram:hover {
+    color: #E1306C;
 }

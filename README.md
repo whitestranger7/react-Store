@@ -13,4 +13,8 @@
 
 1. Connect google fonts ✓
 
-1. Make footer always fixed to bottom ✘
+1. Make clickable basket & connect it with adding items to it ✘
+
+1. Total price in basket ✘
+
+1. Open section with appropriate info on every single item ✘

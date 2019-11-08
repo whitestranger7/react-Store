@@ -36,6 +36,7 @@
 .item__sub .title {
     margin: 5px 0;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .item__sub .title h4 {
@@ -60,6 +61,7 @@
     align-items: center;
     border-radius: 10px;
     margin-left: 6px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .price p {

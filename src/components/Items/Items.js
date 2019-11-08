@@ -24,7 +24,8 @@ class Items extends Component {
     render() {
 
         const posts = this.state.posts.map((el, index) => {
-            return <Item id={index} 
+            return <Item
+            key={index} 
             src={el.src}
             alt={el.alt}
             price={`${el.price}$`}/>

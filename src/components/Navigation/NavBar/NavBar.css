@@ -29,6 +29,7 @@
 .navBar ul li a {
     text-decoration: none;
     color: wheat;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .navBar ul li a .fa-shopping-basket{

@@ -11,4 +11,6 @@
 
 1. Store items via <em>props</em> and <em>this.state</em> ✓
 
-1. Connect google fonts ✘
+1. Connect google fonts ✓
+
+1. Make footer always fixed to bottom ✘

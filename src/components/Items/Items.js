@@ -46,7 +46,7 @@ class Items extends Component {
 
         return(
             <Aux>
-                <Navigation items={this.state.checkoutItemsList}/>
+                <Navigation items={this.state.checkoutItemsList.items}/>
                 <main>
                     {posts}
                 </main>

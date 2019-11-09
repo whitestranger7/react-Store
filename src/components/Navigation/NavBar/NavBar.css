@@ -43,18 +43,32 @@
 
 .basketWindow {
     position: absolute;
-    left: 100%;
+    left: 99%;
     transform: translateX(-100%);
     top: 100px;
     width: 200px;
     height: auto;
     padding: 10px;
-    background-color: aqua;
+    background-color: #ffffff;
     box-sizing: border-box;
+    box-shadow: 0 0 10px black;
 }
 
 .basketWindow__items{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.btnCheckout {
+    border: 0;
+    background-color: #3096c2;
+    color: white;
+    border-radius: 4px;
+    transition: .1s all;
+}
+
+.btnCheckout:active {
+    box-shadow: 1px 1px 3px black;
+    transform: translate(1px, 1px);
 }

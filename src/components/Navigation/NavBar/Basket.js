@@ -17,6 +17,7 @@ const basket = (props) => {
                         <div style={{float: 'right'}}><p>{`${el[1]}$`}</p></div>
                     </div>
                 })}
+                <button className="btnCheckout">Proceed Checkout</button>
             </div>
         </div>
     )

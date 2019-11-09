@@ -2,39 +2,55 @@ import React, {Component} from 'react';
 
 import './Items.css';
 import Item from './Item/Item';
+import Aux from '../AuxContainer';
+import Navigation from './../Navigation/Navigation';
 
 class Items extends Component {
 
     state = {
         posts: [
-            {src: 'http://www.starhub.com/content/dam/catalog/starhub-store-apple-iphone-11-purple-back.png',
-             alt: 'IPhone 11', price: 1000},
-            {src: 'https://cdn.pulse2.com/cdn/2019/07/Google-Pixel-3.png', 
-             alt: 'Google Pixel 3', price: 450},
-            {src: 'https://static.techspot.com/images2/news/bigimage/2019/10/2019-10-15-image-2.png', 
-             alt: 'Google Pixel 4', price: 750},
-            
-        ]
+            {src: 'https://target.scene7.com/is/image/Target/GUEST_f5d0cfc3-9d02-4ee0-a6c6-ed5dc09971d1?wid=488&hei=488&fmt=pjpeg',
+             alt: 'Banana', price: 0.18},
+            {src: 'https://www.freeiconspng.com/uploads/potato-png-32.png', 
+             alt: 'Potato', price: 0.09},
+            {src: 'http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/1024/32365-cucumber-icon.png', 
+             alt: 'Cucumber', price: 0.14},
+        ],
+        checkoutItemsList: {
+            items: [],
+            length: null
+        }
     }
 
-    testClickHandler = () => {
-        
+    testClick = (el) => {
+        const newBasket = [...this.state.checkoutItemsList.items];
+        newBasket.push([el.alt, el.price]);
+        this.setState({
+          checkoutItemsList: {
+              items: newBasket,
+              length: newBasket.length
+          }
+        })
     }
 
     render() {
-
+        
         const posts = this.state.posts.map((el, index) => {
             return <Item
             key={index} 
             src={el.src}
             alt={el.alt}
+            addToBasket={this.testClick.bind(this, el)}
             price={`${el.price}$`}/>
         })
 
         return(
-            <main>
-                {posts}
-            </main>
+            <Aux>
+                <Navigation items={this.state.checkoutItemsList}/>
+                <main>
+                    {posts}
+                </main>
+            </Aux>
         )
     }
 }

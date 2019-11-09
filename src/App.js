@@ -1,18 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
-import Navigation from './components/Navigation/Navigation';
+
 import Items from './components/Items/Items';
 import Footer from './components/Footer/Footer';
 
-function App() {
-  return(
-    <div className="app">
-      <Navigation/>
-      <Items/>
-      <Footer/>
-    </div>
-  )
+class App extends Component {
+
+  render() {
+
+    return(
+
+      <div className="app">
+        <Items/>
+        <Footer/>
+      </div>
+    )
+  }
 }
 
 export default App;

@@ -9,6 +9,7 @@
     margin: 0;
     height: 100%;
     display: flex;
+    position: relative;
 }
 
 .navBar ul li {
@@ -34,4 +35,26 @@
 
 .navBar ul li a .fa-shopping-basket{
     color: wheat;
+}
+
+.basketInteractive {
+    position: relative;
+}
+
+.basketWindow {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    top: 100px;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: aqua;
+    box-sizing: border-box;
+}
+
+.basketWindow__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -22,8 +22,10 @@ const basket = (props) => {
     }
     
     let totalItems = [];
+    let totalPrice = 0;
     for(let i = 0; i < items.length; i++){
         totalItems.push([items[i], prices[i], counts[i]]);
+        totalPrice += prices[i];
     }
 
     return(
@@ -35,6 +37,11 @@ const basket = (props) => {
                                 <div style={{float: 'right'}}><p>{`${el[1].toFixed(2)}$`}</p></div>
                             </div>
                 })}
+                <div className="totalPrice">
+                    <div>
+                        {`${totalPrice.toFixed(2)}$`}
+                    </div>
+                </div>
                 <button className="btnCheckout">Proceed Checkout</button>
             </div>
         </div>

@@ -32,7 +32,7 @@ const basket = (props) => {
         <div style={{display: props.display}} className="basketWindow">
             <div className="basketWindow__items">
                 {totalItems.map((el, index) => {
-                    return <div style={{fontSize: '16px'}} key={index}>
+                    return <div className="basket__item" style={{fontSize: '16px'}} key={index}>
                                 <div style={{float: 'left'}}><p>{`x${el[2]} ${el[0]}`}</p></div>
                                 <div style={{float: 'right'}}><p>{`${el[1].toFixed(2)}$`}</p></div>
                             </div>

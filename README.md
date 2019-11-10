@@ -17,4 +17,14 @@
 
 1. Total price in basket ✓
 
+1. Use firebase database to upload items from backend ✓
+
 1. Open section with appropriate info on every single item ✘
+
+## Future plans:
+
+1. Setup firebase features:
+    <ul>
+    <li>User authentication for personal discounts</li>
+    <li>Connect user features via firebase</li>
+    </ul>

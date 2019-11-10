@@ -37,4 +37,4 @@
 
 # Some kind of demonstration
 
-![Alt Text](https://media.giphy.com/media/RIXvahWJcf7EvRmNBT/source.gif)
+<img src="https://media.giphy.com/media/RIXvahWJcf7EvRmNBT/source.gif" width="400" height="250" />

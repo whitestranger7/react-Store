@@ -21,6 +21,8 @@
 
 1. Open section with appropriate info on every single item and connection with basket ✓
 
+1. Additional unique info for every single item ✘
+
 1. Delete items from basket ✘
 
 1. Correct bugs with scroll position ✘
@@ -34,7 +36,3 @@
     </ul>
 
 1. SMTH ELSE, IDK WHAT LOL !..!
-
-# Some kind of demonstration
-
-![Alt Text](https://media.giphy.com/media/RIXvahWJcf7EvRmNBT/source.gif)

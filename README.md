@@ -21,6 +21,10 @@
 
 1. Open section with appropriate info on every single item and connection with basket ✓
 
+1. Delete items from basket ✘
+
+1. Correct bugs with scroll position ✘
+
 ## Future plans:
 
 1. Setup firebase features:
@@ -29,4 +33,8 @@
     <li>Connect user features via firebase</li>
     </ul>
 
-1. SMTH ELSE, IDK WHAT NOW !..!
+1. SMTH ELSE, IDK WHAT LOL !..!
+
+# Some kind of demonstration
+
+![Alt Text](https://media.giphy.com/media/RIXvahWJcf7EvRmNBT/source.gif)

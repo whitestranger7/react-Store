@@ -52,6 +52,7 @@
     background-color: #ffffff;
     box-sizing: border-box;
     box-shadow: 0 0 10px black;
+    z-index: 100;
 }
 
 .basketWindow__items{

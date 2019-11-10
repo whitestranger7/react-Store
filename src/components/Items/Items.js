@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 
 import './Items.css';
+
 import Item from './Item/Item';
 import Aux from '../AuxContainer';
 import Navigation from './../Navigation/Navigation';
 import axios from '../../init-firebase';
+import Popup from './Popup/Popup';
 
 
 class Items extends Component {
@@ -15,6 +17,11 @@ class Items extends Component {
             items: [],
             length: null
         },
+        popupItem: {
+            display: false,
+            el: null,
+            info: null
+        }
     }
 
     componentDidMount() {
@@ -30,7 +37,7 @@ class Items extends Component {
         })
     }
 
-    testClick = (el) => {
+    addToBasket = (el) => {
         const newBasket = [...this.state.checkoutItemsList.items];
         newBasket.push([el.alt, el.price]);
         this.setState({
@@ -41,6 +48,27 @@ class Items extends Component {
         })
     }
 
+    popupHandler = () => {
+        this.setState({
+            popupItem: {
+                display: false,
+                el: null,
+                info: null
+            }
+        })
+    }
+
+
+    popupItemWindow = (el) => {
+        this.setState({
+            popupItem: {
+                display: true,
+                el: el,
+                info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices volutpat elementum. Maecenas bibendum, diam quis aliquam porttitor, nunc dolor semper lorem, ut tempus quam nibh nec eros. Sed pellentesque consequat diam, id pretium metus. Integer sollicitudin felis lectus, a feugiat lacus sollicitudin ut.'
+            }
+        })
+    }
+
     render() {
         
         const posts = this.state.posts.map((el, index) => {
@@ -48,14 +76,21 @@ class Items extends Component {
             key={index} 
             src={el.src}
             alt={el.alt}
-            addToBasket={this.testClick.bind(this, el)}
+            addToBasket={this.addToBasket.bind(this, el)}   
+            popupItemWindow={this.popupItemWindow.bind(this, el)}
             price={`${el.price}$`}/>
         })
+
+        let popup = null;
+        if(this.state.popupItem.display){
+            popup = <Popup popupContainerHandler={this.popupHandler} src={this.state.popupItem.el.src} info={this.state.popupItem.info} price={this.state.popupItem.el.price} addToBasket={this.addToBasket.bind(this, this.state.popupItem.el)}/>
+        }
 
         return(
             <Aux>
                 <Navigation items={this.state.checkoutItemsList.items}/>
                 <main>
+                    {popup}
                     {posts}
                 </main>
             </Aux>

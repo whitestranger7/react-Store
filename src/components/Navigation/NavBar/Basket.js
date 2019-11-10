@@ -6,11 +6,10 @@ const basket = (props) => {
 
     const itemList = props.items;
 
-    let items = [];
-    let prices = [];
-    let counts = [];
+    let [items, prices, counts] = [[], [], []] 
 
     for(let i of itemList){
+        
         if(items.indexOf(i[0]) === -1){
             items.push(i[0]);
             prices.push(i[1]);

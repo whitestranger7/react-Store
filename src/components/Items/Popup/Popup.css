@@ -1,0 +1,96 @@
+.popup_girth {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(191, 191, 191, .4);
+}
+
+.popup_window {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+    box-sizing: content-box;
+    text-align: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 17px;
+    z-index: 1000;
+}
+
+.popup_window__main {
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.popup_window__main img {
+    width: 350px;
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+}
+
+.popup_window__main p {
+    float: left;
+    height: 100%;
+    width: 235px;
+}
+
+.popup_window .lower {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_window .lower .btn {
+    height: 60%;
+    width: 300px;
+    margin-right: 30px;
+}
+
+.popup_window .lower .btn button {
+    height: 100%;
+    width: 100%;
+    background-color: #3096c2;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border: 0;
+    font-size: 30px;
+    transition: .1s all;
+}
+
+.popup_window .lower .btn button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 3px black;
+}
+
+.popup_window .lower .price {
+    height: 60%;
+    width: 100px;
+    background-color: yellowgreen;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.popup_window .lower .number {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    margin-left: 1%;
+}
+
+.cross{
+    position: absolute;
+    left: 95%;
+    cursor: pointer;
+}

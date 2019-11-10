@@ -7,7 +7,7 @@ const item = (props) => {
     return(
         <div className="item">
             <div className="item__main">
-                <div className="img" onClick={props.click}>
+                <div className="img" onClick={props.popupItemWindow}>
                     <img src={props.src} alt={props.alt}></img>
                 </div>
             </div>

@@ -19,7 +19,7 @@
 
 1. Use firebase database to upload items from backend ✓
 
-1. Open section with appropriate info on every single item ✘
+1. Open section with appropriate info on every single item and connection with basket ✓
 
 ## Future plans:
 
@@ -28,3 +28,5 @@
     <li>User authentication for personal discounts</li>
     <li>Connect user features via firebase</li>
     </ul>
+
+1. SMTH ELSE, IDK WHAT NOW !..!

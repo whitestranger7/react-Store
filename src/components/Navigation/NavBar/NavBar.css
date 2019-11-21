@@ -95,6 +95,38 @@
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.basket__item:not(:first-child) {
-    border-top: 1px solid black;
+.basket__item {
+    background-color: #e8e6e1;
+    border-radius: 10px;
+    padding: 0 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.basket__item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px black;
+}
+
+.basket__item div p {
+    margin: 0;
+}
+
+.basket__item-left, 
+.basket__item-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.basket__item-left {
+    width: 70%;
+}
+
+.basket__item-right {
+    width: 30%;
 }

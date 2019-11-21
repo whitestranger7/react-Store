@@ -21,7 +21,7 @@
 
 1. Open section with appropriate info on every single item and connection with basket ✓
 
-1. Additional unique info for every single item ✘
+1. Additional unique info for every single item ✓
 
 1. Delete items from basket ✘
 

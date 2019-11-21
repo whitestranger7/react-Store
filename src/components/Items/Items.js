@@ -82,7 +82,12 @@ class Items extends Component {
 
         let popup = null;
         if(this.state.popupItem.display){
-            popup = <Popup popupContainerHandler={this.popupHandler} src={this.state.popupItem.el.src} info={this.state.popupItem.el.info} price={this.state.popupItem.el.price} addToBasket={this.addToBasket.bind(this, this.state.popupItem.el)}/>
+            popup = (<Popup 
+                popupContainerHandler={this.popupHandler} 
+                src={this.state.popupItem.el.src} 
+                info={this.state.popupItem.el.info} 
+                price={this.state.popupItem.el.price} 
+                addToBasket={this.addToBasket.bind(this, this.state.popupItem.el)}/>)
         }
 
         return(

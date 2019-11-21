@@ -64,7 +64,6 @@ class Items extends Component {
             popupItem: {
                 display: true,
                 el: el,
-                info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices volutpat elementum. Maecenas bibendum, diam quis aliquam porttitor, nunc dolor semper lorem, ut tempus quam nibh nec eros. Sed pellentesque consequat diam, id pretium metus. Integer sollicitudin felis lectus, a feugiat lacus sollicitudin ut.'
             }
         })
     }
@@ -83,7 +82,7 @@ class Items extends Component {
 
         let popup = null;
         if(this.state.popupItem.display){
-            popup = <Popup popupContainerHandler={this.popupHandler} src={this.state.popupItem.el.src} info={this.state.popupItem.info} price={this.state.popupItem.el.price} addToBasket={this.addToBasket.bind(this, this.state.popupItem.el)}/>
+            popup = <Popup popupContainerHandler={this.popupHandler} src={this.state.popupItem.el.src} info={this.state.popupItem.el.info} price={this.state.popupItem.el.price} addToBasket={this.addToBasket.bind(this, this.state.popupItem.el)}/>
         }
 
         return(

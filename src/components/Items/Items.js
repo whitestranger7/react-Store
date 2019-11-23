@@ -19,7 +19,7 @@ class Items extends Component {
             display: false,
             el: null,
             info: null
-        }
+        },
     };
 
     componentDidMount() {
@@ -41,7 +41,7 @@ class Items extends Component {
             checkoutItemsList: {
                 items: newBasket,
                 length: newBasket.length
-            }
+            },
         });
     };
 

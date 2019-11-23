@@ -87,6 +87,19 @@
     text-decoration: none;
 }
 
+.basket:hover {
+    animation-name: basketAnimation;
+    animation-duration: .4s;
+}
+
 .fa-shopping-basket {
     color: black;
+}
+
+@keyframes basketAnimation {
+    0% {font-size: 30px;}
+    25% {font-size: 28px}
+    50% {font-size: 26px;}
+    75% {font-size: 28px;}
+    100% {font-size: 30px;}
 }

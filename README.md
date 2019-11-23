@@ -27,9 +27,11 @@
 
 1. Correct bugs with scroll position ✓
 
+1. Make navigation section as independent component ✘
+
 1. Create info section ✘
 
-1. Add user authorization for ✘
+1. Add user authorization✘
 
 ## Future plans:
 

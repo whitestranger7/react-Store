@@ -79,9 +79,10 @@
     font-size: 30px;
     line-height: 50px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
-.basket a i {
+.basket i {
     vertical-align: middle;
     text-decoration: none;
 }

@@ -20,7 +20,7 @@ const item = (props) => {
                         <p>{props.price}</p>
                     </div>
                     <div onClick={props.addToBasket} className="basket">
-                        <a href="/#"><i className="fas fa-shopping-basket"></i></a>
+                        <i className="fas fa-shopping-basket"></i>
                     </div>
                 </div>
             </div>

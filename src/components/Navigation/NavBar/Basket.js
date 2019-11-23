@@ -4,10 +4,9 @@ import "./NavBar.css";
 import Aux from "./../../AuxContainer";
 
 class Basket extends Component {
-
     state = {
         itemList: [],
-        totalPrice: 0,
+        totalPrice: 0
     };
 
     static getDerivedStateFromProps(props) {
@@ -39,7 +38,6 @@ class Basket extends Component {
     }
 
     render() {
-
         return (
             <Aux>
                 <div
@@ -49,7 +47,14 @@ class Basket extends Component {
                     <div className="basketWindow__items">
                         {this.state.itemList.map((el, index) => {
                             return (
-                                <div className="basket__item" key={index} onClick={this.props.deleteItem.bind(this, el)}>
+                                <div
+                                    className="basket__item"
+                                    key={index}
+                                    onClick={this.props.deleteItem.bind(
+                                        this,
+                                        el
+                                    )}
+                                >
                                     <div className="basket__item-left">
                                         <p>{`x${el[2]} ${el[0]}`}</p>
                                     </div>

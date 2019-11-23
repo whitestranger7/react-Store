@@ -1,16 +1,14 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-import './Items.css';
+import "./Items.css";
 
-import Item from './Item/Item';
-import Aux from '../AuxContainer';
-import Navigation from './../Navigation/Navigation';
-import axios from '../../init-firebase';
-import Popup from './Popup/Popup';
-
+import Item from "./Item/Item";
+import Aux from "../AuxContainer";
+import Navigation from "./../Navigation/Navigation";
+import axios from "../../init-firebase";
+import Popup from "./Popup/Popup";
 
 class Items extends Component {
-
     state = {
         posts: [],
         checkoutItemsList: {
@@ -22,31 +20,30 @@ class Items extends Component {
             el: null,
             info: null
         }
-    }
+    };
 
     componentDidMount() {
-        axios.get('/posts.json')
-            .then(resp => {
-                let itemsList = [];
-                for(let i of resp.data){
-                    itemsList.push(i)
-                };
-                this.setState({
-                    posts: itemsList
-                })
-        })
+        axios.get("/posts.json").then(resp => {
+            let itemsList = [];
+            for (let i of resp.data) {
+                itemsList.push(i);
+            }
+            this.setState({
+                posts: itemsList
+            });
+        });
     }
 
-    addToBasket = (el) => {
+    addToBasket = el => {
         const newBasket = [...this.state.checkoutItemsList.items];
         newBasket.push([el.alt, el.price]);
         this.setState({
-          checkoutItemsList: {
-              items: newBasket,
-              length: newBasket.length
-          }
-        })
-    }
+            checkoutItemsList: {
+                items: newBasket,
+                length: newBasket.length
+            }
+        });
+    };
 
     popupHandler = () => {
         this.setState({
@@ -55,23 +52,22 @@ class Items extends Component {
                 el: null,
                 info: null
             }
-        })
-    }
+        });
+    };
 
-
-    popupItemWindow = (el) => {
+    popupItemWindow = el => {
         this.setState({
             popupItem: {
                 display: true,
-                el: el,
+                el: el
             }
-        })
-    }
+        });
+    };
 
-    deleteItem = (el) => {
+    deleteItem = el => {
         const newItemList = [...this.state.checkoutItemsList.items];
         for (let i = 0; i < newItemList.length; i++) {
-            if(el[0] === newItemList[i][0]){
+            if (el[0] === newItemList[i][0]) {
                 newItemList.splice(i, 1);
                 break;
             }
@@ -81,40 +77,51 @@ class Items extends Component {
                 items: newItemList,
                 length: newItemList.length
             }
-        })
-    }
+        });
+    };
 
     render() {
-        
         const posts = this.state.posts.map((el, index) => {
-            return <Item
-            key={index} 
-            src={el.src}
-            alt={el.alt}
-            addToBasket={this.addToBasket.bind(this, el)}   
-            popupItemWindow={this.popupItemWindow.bind(this, el)}
-            price={`${el.price}$`}/>
-        })
+            return (
+                <Item
+                    key={index}
+                    src={el.src}
+                    alt={el.alt}
+                    addToBasket={this.addToBasket.bind(this, el)}
+                    popupItemWindow={this.popupItemWindow.bind(this, el)}
+                    price={`${el.price}$`}
+                />
+            );
+        });
 
         let popup = null;
-        if(this.state.popupItem.display){
-            popup = (<Popup 
-                popupContainerHandler={this.popupHandler} 
-                src={this.state.popupItem.el.src} 
-                info={this.state.popupItem.el.info} 
-                price={this.state.popupItem.el.price} 
-                addToBasket={this.addToBasket.bind(this, this.state.popupItem.el)}/>)
+        if (this.state.popupItem.display) {
+            popup = (
+                <Popup
+                    popupContainerHandler={this.popupHandler}
+                    src={this.state.popupItem.el.src}
+                    info={this.state.popupItem.el.info}
+                    price={this.state.popupItem.el.price}
+                    addToBasket={this.addToBasket.bind(
+                        this,
+                        this.state.popupItem.el
+                    )}
+                />
+            );
         }
 
-        return(
+        return (
             <Aux>
-                <Navigation items={this.state.checkoutItemsList.items} deleteItem={this.deleteItem}/>
+                <Navigation
+                    items={this.state.checkoutItemsList.items}
+                    deleteItem={this.deleteItem}
+                />
                 <main>
                     {popup}
                     {posts}
                 </main>
             </Aux>
-        )
+        );
     }
 }
 

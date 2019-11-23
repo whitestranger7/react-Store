@@ -23,11 +23,13 @@
 
 1. Additional unique info for every single item ✓
 
-1. Delete items from basket ✓
+1. Delete items from basket by clicking on single item ✓
 
-1. Correct bugs with scroll position ✘
+1. Correct bugs with scroll position ✓
 
 1. Create info section ✘
+
+1. Add user authorization for ✘
 
 ## Future plans:
 

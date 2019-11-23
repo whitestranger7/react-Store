@@ -68,6 +68,22 @@ class Items extends Component {
         })
     }
 
+    deleteItem = (el) => {
+        const newItemList = [...this.state.checkoutItemsList.items];
+        for (let i = 0; i < newItemList.length; i++) {
+            if(el[0] === newItemList[i][0]){
+                newItemList.splice(i, 1);
+                break;
+            }
+        }
+        this.setState({
+            checkoutItemsList: {
+                items: newItemList,
+                length: newItemList.length
+            }
+        })
+    }
+
     render() {
         
         const posts = this.state.posts.map((el, index) => {
@@ -92,7 +108,7 @@ class Items extends Component {
 
         return(
             <Aux>
-                <Navigation items={this.state.checkoutItemsList.items}/>
+                <Navigation items={this.state.checkoutItemsList.items} deleteItem={this.deleteItem}/>
                 <main>
                     {popup}
                     {posts}

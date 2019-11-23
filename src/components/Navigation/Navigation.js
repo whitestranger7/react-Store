@@ -33,7 +33,8 @@ class Navigation extends Component {
                     <NavBar 
                     basketClick={this.basketWindowHandler}
                     display={this.state.basketWindow}
-                    items={this.props.items}/>
+                    items={this.props.items}
+                    deleteItem={this.props.deleteItem}/>
                 </div>
             </nav>
         )

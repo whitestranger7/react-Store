@@ -12,7 +12,7 @@ const navBar = (props) => {
                 <li><a href="/#">Smth</a></li>
                 <li><a href="/#">Info</a></li>
                 <li className="basketInteractive"><a href="/#" onClick={props.basketClick}><i className="fas fa-shopping-basket"></i></a></li>
-                <Basket display={props.display} items={props.items}/>
+                <Basket display={props.display} items={props.items} deleteItem={props.deleteItem}/>
             </ul>
         </div>
     )

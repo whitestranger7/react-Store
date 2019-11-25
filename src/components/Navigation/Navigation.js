@@ -6,7 +6,7 @@ import NavBar from "./NavBar/NavBar";
 
 class Navigation extends Component {
     state = {
-        basketWindow: "none"
+        basketWindow: "block"
     };
 
     basketWindowHandler = () => {
@@ -23,18 +23,28 @@ class Navigation extends Component {
     };
 
     render() {
+        let navbar = <NavBar />;
+        if (
+            this.props.items !== undefined &&
+            this.props.deleteItem !== undefined
+        ) {
+            navbar = (
+                <NavBar
+                    basketClick={this.basketWindowHandler}
+                    display={this.state.basketWindow}
+                    items={this.props.items}
+                    deleteItem={this.props.deleteItem}
+                />
+            );
+        }
+
         return (
             <nav className="nav">
                 <div className="left_side">
                     <Logo />
                 </div>
                 <div className="right_side">
-                    <NavBar
-                        basketClick={this.basketWindowHandler}
-                        display={this.state.basketWindow}
-                        items={this.props.items}
-                        deleteItem={this.props.deleteItem}
-                    />
+                    {navbar}
                 </div>
             </nav>
         );

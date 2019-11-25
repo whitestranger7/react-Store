@@ -76,10 +76,11 @@
     text-align: center;
     background-color: teal;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 50px;
     margin-right: 5px;
     cursor: pointer;
+    transition: .3s all;
 }
 
 .basket i {
@@ -88,18 +89,9 @@
 }
 
 .basket:hover {
-    animation-name: basketAnimation;
-    animation-duration: .4s;
+    font-size: 30px;
 }
 
 .fa-shopping-basket {
     color: black;
-}
-
-@keyframes basketAnimation {
-    0% {font-size: 30px;}
-    25% {font-size: 28px}
-    50% {font-size: 26px;}
-    75% {font-size: 28px;}
-    100% {font-size: 30px;}
 }

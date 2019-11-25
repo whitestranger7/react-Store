@@ -27,9 +27,13 @@
 
 1. Correct bugs with scroll position ✓
 
-1. Make navigation section as independent component ✘
+1. Implement react-routing ✓
 
-1. Create info section ✘
+1. Create info section ✓
+
+1. Add form-action in info section ✘
+
+1. Optimize app for tablets and phones ✘
 
 1. Add user authorization✘
 

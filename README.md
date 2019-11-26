@@ -31,7 +31,11 @@
 
 1. Create info section ✓
 
-1. Add form-action in info section ✘
+1. Add form-action in info section ✓
+
+1. Male an opportunity to sent form ✘
+
+1. Keep all props while route changes ✘
 
 1. Optimize app for tablets and phones ✘
 

@@ -1,6 +1,8 @@
 import React from "react";
 
-import "./InfoPage.css";
+import './InfoPage.css'
+
+import Form from './../Form/Form';
 
 const info = () => {
     return (
@@ -110,6 +112,10 @@ const info = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="main__form">
+                <h1>Contact US</h1>
+                <Form/>
             </div>
         </div>
     );

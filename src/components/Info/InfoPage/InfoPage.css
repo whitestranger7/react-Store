@@ -5,6 +5,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .main__hero {
@@ -99,8 +100,44 @@
     font-size: 20px;
 }
 
-.main__form {
-    width: 70%;
-    margin-bottom: 60px;
+.main_container {
+    width: 100%;
+    position: relative;
+}
+
+.main_container .main__form {
+    width: 40%;
     text-align: center;
+    margin: 0 auto 80px auto;
+}
+
+.main__form h1 {
+    text-transform: uppercase;
+    color: rgb(51, 53, 53);
+}
+
+.form__container {
+    width: 100%;
+    margin-top: 70px;
+}
+
+form {
+    width: 100%;
+}
+
+.label {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.label div {
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 50%;
+    min-height: 100px;
+    max-height: 300px;
 }

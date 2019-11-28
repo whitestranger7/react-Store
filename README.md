@@ -33,7 +33,7 @@
 
 1. Add form-action in info section ✓
 
-1. Make an opportunity to sent form ✘
+1. Make an option to sent form ✓
 
 1. Keep all props while route changes ✘
 
